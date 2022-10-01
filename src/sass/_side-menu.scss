@@ -1,0 +1,134 @@
+.wrapper {
+  display: flex;
+}
+
+.side-menu {
+  height: 100%;
+  background-color: #fff;
+  padding: 36px 0;
+  transition: transform 250ms linear;
+  z-index: 100;
+
+  @media screen and (min-width: 768px) {
+    padding: 36px 28px 0;
+  }
+
+  @media screen and (max-width: 1440px) {
+    position: absolute;
+    transform: translateX(-100%);
+  }
+}
+
+.is-open {
+  transform: translateX(0);
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.side-menu__btn {
+  position: absolute;
+  top: 10px;
+  left: 310px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media screen and (min-width: 1200px) {
+    left: 360px;
+  }
+
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.side-menu__btn-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  @media screen and (min-width: 1440px) {
+    display: none;
+  }
+}
+
+.side-menu__icon {
+  stroke: black;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 64px;
+  margin-left: 28px;
+  @include font(600, 26px, 39px);
+  letter-spacing: 0.01em;
+  color: #000000;
+}
+
+.logo__icon {
+  margin-right: 8px;
+}
+
+.logo__version {
+  @include font(500, 10px, 15px);
+  letter-spacing: -0.01em;
+  color: #838383;
+}
+
+.menu {
+  margin-left: 39px;
+}
+
+.menu__item:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.menu__link {
+  display: flex;
+  min-width: 250px;
+  padding: 11px 8px 11px 11px;
+  align-items: center;
+  border-radius: 8px;
+  @include font(500, 14px, 21px);
+  letter-spacing: -0.01em;
+  color: #9197b3;
+  transition: background-color 250ms linear, color 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: #5932ea;
+    color: white;
+  }
+}
+
+.menu__icon {
+  margin-right: 14px;
+  fill: #9197b3;
+  stroke: #9197b3;
+  transition: stroke 250ms linear, fill 2250ms linear;
+
+  .menu__link:hover &,
+  .menu__link:focus & {
+    fill: white;
+    stroke: white;
+  }
+}
+
+.menu__icon-chevron {
+  margin-left: auto;
+  stroke: #9197b3;
+  transition: stroke 250ms linear;
+
+  .menu__link:hover &,
+  .menu__link:focus & {
+    stroke: white;
+  }
+}

@@ -1,0 +1,211 @@
+.product {
+  width: 100%;
+  background-color: #eeeeee;
+  padding: 15px 15px;
+
+  @media screen and(min-width:1200px) {
+    padding: 41px 95px 0 71px;
+  }
+}
+
+.product__top-line {
+  @media screen and (max-width: 1200px) {
+    display: flex;
+    justify-content: center;
+  }
+  margin-bottom: 51px;
+}
+
+.table {
+  //   width: 968px;
+  //   height: 812px;
+  padding: 30px 44px 40px 38px;
+  box-shadow: 0px 10px 60px rgba(226, 236, 249, 0.5);
+  border-radius: 30px;
+  background-color: #ffffff;
+}
+
+.table__top-line {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.table__title {
+  @include font(600, 14px, 20px);
+  letter-spacing: -0.01em;
+  color: #000000;
+
+  @media screen and (min-width: 768px) {
+    @include font(600, 22px, 33px);
+    margin-bottom: 7px;
+  }
+}
+
+.table__subtitle {
+  @include font(400, 11px, 21px);
+  letter-spacing: -0.01em;
+  color: #16c098;
+
+  @media screen and (min-width: 768px) {
+    @include font(400, 14px, 21px);
+  }
+}
+
+.form {
+  margin-left: auto;
+}
+
+.form__label {
+  position: relative;
+}
+
+.form__icon {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translateY(-50%);
+}
+
+.form__input {
+  width: 150px;
+  height: 38px;
+  padding-left: 40px;
+  border-radius: 10px;
+  border: none;
+  background-color: #f9fbff;
+
+  &::placeholder {
+    @include font(400, 12px, 18px);
+    letter-spacing: -0.01em;
+    color: #b5b7c0;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 216px;
+  }
+}
+
+table {
+  border-collapse: collapse;
+}
+
+th {
+  @include font(500, 6px, 21px);
+  color: #b5b7c0;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #eeeeee;
+  letter-spacing: -0.01em;
+
+  @media screen and(min-width:768px) {
+    @include font(500, 14px, 21px);
+    padding-bottom: 14px;
+  }
+}
+
+td {
+  @include font(500, 6px, 21px);
+  letter-spacing: -0.01em;
+  color: #292d32;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-bottom: 2px solid #eeeeee;
+
+  @media screen and(min-width:768px) {
+    @include font(500, 14px, 21px);
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 0;
+  width: 30px;
+  border-radius: 4px;
+  @include font(500, 6px, 21px);
+  letter-spacing: -0.01em;
+  @media screen and (min-width: 768px) {
+    width: 80px;
+    padding: 4px 0;
+
+    @include font(500, 14px, 21px);
+  }
+}
+
+.active {
+  border: 1px solid #00b087;
+  color: #008767;
+  background-color: rgba(22, 192, 152, 0.38);
+}
+
+.inactive {
+  background-color: #ffc5c5;
+  border: 1px solid #df0404;
+  color: #df0404;
+}
+
+.product__under-line {
+  margin-top: 32px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product__show {
+  @include font(500, 14px, 21px);
+  letter-spacing: -0.01em;
+  color: #b5b7c0;
+}
+
+.product__pages-btns {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+.product__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 24px;
+  background-color: #f5f5f5;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  @include font(500, 12px, 12px);
+  letter-spacing: -0.01em;
+  color: #404b52;
+  cursor: pointer;
+  transition: background-color 250ms linear, color 250ms linear;
+
+  &:not(:last-child) {
+    margin-right: 12px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: #5932ea;
+    color: #ffffff;
+  }
+}
+
+.dots {
+  border: none;
+  background-color: transparent;
+  align-items: flex-end;
+}
+
+.product__icon {
+  fill: #404b52;
+  transition: fill 250ms linear;
+
+  .product__btn:hover &,
+  .product__btn:focus & {
+    fill: #ffffff;
+  }
+}
